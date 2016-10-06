@@ -26,6 +26,6 @@ message( STATUS "-----------------------------------------------------------" )
 message( STATUS "" ) 
 
 add_library( spdlog-adapter INTERFACE )
-target_include_directories( spdlog-adapter INTERFACE src/include/spdlog )
+target_include_directories( spdlog-adapter INTERFACE src/include )
 target_link_libraries( spdlog-adapter INTERFACE fmt-adapter ) 
 

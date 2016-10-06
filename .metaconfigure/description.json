@@ -1,5 +1,13 @@
 {
+"version": "0.0.1",
+"is_external_project": true,
+"language": "c++",
+"unit_tests": {},
+"target": "include",
+"implementation_files": [],
+"language_revision": "C++14",
 "name": "spdlog-adapter",
+"include_path": "src/include",
 "header_files": [
 "src/bench/utils.h",
 "src/bench/latency/utils.h",
@@ -40,13 +48,5 @@
 "src/tests/catch.hpp",
 "src/tests/includes.h",
 "src/tests/utils.h"
-],
-"is_external_project": true,
-"target": "include",
-"language_revision": "C++14",
-"language": "c++",
-"implementation_files": [],
-"version": "0.0.1",
-"unit_tests": {},
-"include_path": "src/include/spdlog"
+]
 }

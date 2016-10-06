@@ -1,0 +1,3 @@
+[submodule "dependencies/fmt-adapter"]
+	path = dependencies/fmt-adapter
+	url = https://github.com/apmccartney/fmt-adapter.git

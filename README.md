@@ -13,3 +13,6 @@ git remote add spdlog https://github.com/gabime/spdlog.git
 # Do this when you need to update the subtree
 git subtree pull --prefix=src spdlog master
 ```
+
+# License
+The code contained in this repository is covered by the license contained in the [LICENSE}(LICENSE) file.

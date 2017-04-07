@@ -84,6 +84,7 @@ target_sources( spdlog-adapter INTERFACE
   "${CMAKE_CURRENT_SOURCE_DIR}/src/include/spdlog/sinks/ostream_sink.h"
   "${CMAKE_CURRENT_SOURCE_DIR}/src/include/spdlog/sinks/sink.h"
   "${CMAKE_CURRENT_SOURCE_DIR}/src/include/spdlog/sinks/stdout_sinks.h"
-  "${CMAKE_CURRENT_SOURCE_DIR}/src/include/spdlog/sinks/syslog_sink.h" )
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/include/spdlog/sinks/syslog_sink.h"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/include/spdlog/sinks/wincolor_sink.h" )
 target_include_directories( spdlog-adapter INTERFACE src/include )
 target_link_libraries( spdlog-adapter INTERFACE fmt-adapter )

@@ -42,7 +42,8 @@
     "src/include/spdlog/sinks/ostream_sink.h",
     "src/include/spdlog/sinks/sink.h",
     "src/include/spdlog/sinks/stdout_sinks.h",
-    "src/include/spdlog/sinks/syslog_sink.h"
+    "src/include/spdlog/sinks/syslog_sink.h",
+    "src/include/spdlog/sinks/wincolor_sink.h"
   ],
   "ignore pattern": "bench|example|fmt",
   "implementation files": [],

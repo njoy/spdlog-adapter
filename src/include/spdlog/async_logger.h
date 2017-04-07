@@ -61,8 +61,13 @@ public:
                  const std::function<void()>& worker_teardown_cb = nullptr);
 
     //Wait for the queue to be empty, and flush synchronously
-    //Warning: this can potentialy last forever as we wait it to complete
+    //Warning: this can potentially last forever as we wait it to complete
     void flush() override;
+
+    // Error handler
+    virtual void set_error_handler(log_err_handler) override;
+    virtual log_err_handler error_handler() override;
+
 protected:
     void _sink_it(details::log_msg& msg) override;
     void _set_formatter(spdlog::formatter_ptr msg_formatter) override;

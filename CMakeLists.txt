@@ -44,7 +44,9 @@ include( CMakeDependentOption REQUIRED )
      OUTPUT_STRIP_TRAILING_WHITESPACE
 ) 
 
-add_subdirectory( subprojects/fmt-adapter )
+if( NOT TARGET fmt-adapter )
+  add_subdirectory( ${ROOT_DIRECTORY}/subprojects/fmt-adapter )
+endif()
 
 message( STATUS "" )
 message( STATUS "-----------------------------------------------------------" )

@@ -4,7 +4,8 @@
       "h++",
       "hxx",
       "hpp",
-      "hh"
+      "hh",
+      "h"
     ],
     "implementation files": [
       "c++",
@@ -13,9 +14,39 @@
       "cc"
     ]
   },
-  "header files": [],
-  "ignore pattern": "",
+  "header files": [
+    "src/include/spdlog/async_logger.h",
+    "src/include/spdlog/common.h",
+    "src/include/spdlog/formatter.h",
+    "src/include/spdlog/logger.h",
+    "src/include/spdlog/spdlog.h",
+    "src/include/spdlog/tweakme.h",
+    "src/include/spdlog/details/async_log_helper.h",
+    "src/include/spdlog/details/async_logger_impl.h",
+    "src/include/spdlog/details/file_helper.h",
+    "src/include/spdlog/details/log_msg.h",
+    "src/include/spdlog/details/logger_impl.h",
+    "src/include/spdlog/details/mpmc_bounded_q.h",
+    "src/include/spdlog/details/null_mutex.h",
+    "src/include/spdlog/details/os.h",
+    "src/include/spdlog/details/pattern_formatter_impl.h",
+    "src/include/spdlog/details/registry.h",
+    "src/include/spdlog/details/spdlog_impl.h",
+    "src/include/spdlog/sinks/android_sink.h",
+    "src/include/spdlog/sinks/ansicolor_sink.h",
+    "src/include/spdlog/sinks/base_sink.h",
+    "src/include/spdlog/sinks/dist_sink.h",
+    "src/include/spdlog/sinks/file_sinks.h",
+    "src/include/spdlog/sinks/msvc_sink.h",
+    "src/include/spdlog/sinks/null_sink.h",
+    "src/include/spdlog/sinks/ostream_sink.h",
+    "src/include/spdlog/sinks/sink.h",
+    "src/include/spdlog/sinks/stdout_sinks.h",
+    "src/include/spdlog/sinks/syslog_sink.h"
+  ],
+  "ignore pattern": "bench|example|fmt",
   "implementation files": [],
+  "include path": "src",
   "initialized": true,
   "is external project": true,
   "language": "c++",
@@ -26,7 +57,17 @@
     "c++14"
   ],
   "strict": true,
-  "test pattern": "test$",
-  "tests": {},
+  "test pattern": "tests",
+  "tests": {
+    "spdlog-adapter": [
+      "src/tests/errors.cpp",
+      "src/tests/file_helper.cpp",
+      "src/tests/file_log.cpp",
+      "src/tests/format.cpp",
+      "src/tests/main.cpp",
+      "src/tests/registry.cpp",
+      "src/tests/utils.cpp"
+    ]
+  },
   "update": false
 }

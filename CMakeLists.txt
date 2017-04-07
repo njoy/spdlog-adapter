@@ -44,6 +44,8 @@ include( CMakeDependentOption REQUIRED )
      OUTPUT_STRIP_TRAILING_WHITESPACE
 ) 
 
+add_subdirectory( subprojects/fmt-adapter )
+
 message( STATUS "" )
 message( STATUS "-----------------------------------------------------------" )
 message( STATUS "" )
@@ -54,4 +56,34 @@ message( STATUS "" )
 message( STATUS "-----------------------------------------------------------" )
 
 add_library( spdlog-adapter INTERFACE )
+target_sources( spdlog-adapter INTERFACE
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/include/spdlog/async_logger.h"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/include/spdlog/common.h"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/include/spdlog/formatter.h"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/include/spdlog/logger.h"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/include/spdlog/spdlog.h"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/include/spdlog/tweakme.h"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/include/spdlog/details/async_log_helper.h"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/include/spdlog/details/async_logger_impl.h"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/include/spdlog/details/file_helper.h"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/include/spdlog/details/log_msg.h"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/include/spdlog/details/logger_impl.h"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/include/spdlog/details/mpmc_bounded_q.h"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/include/spdlog/details/null_mutex.h"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/include/spdlog/details/os.h"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/include/spdlog/details/pattern_formatter_impl.h"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/include/spdlog/details/registry.h"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/include/spdlog/details/spdlog_impl.h"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/include/spdlog/sinks/android_sink.h"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/include/spdlog/sinks/ansicolor_sink.h"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/include/spdlog/sinks/base_sink.h"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/include/spdlog/sinks/dist_sink.h"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/include/spdlog/sinks/file_sinks.h"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/include/spdlog/sinks/msvc_sink.h"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/include/spdlog/sinks/null_sink.h"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/include/spdlog/sinks/ostream_sink.h"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/include/spdlog/sinks/sink.h"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/include/spdlog/sinks/stdout_sinks.h"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/include/spdlog/sinks/syslog_sink.h" )
 target_include_directories( spdlog-adapter INTERFACE src/include )
+target_link_libraries( spdlog-adapter INTERFACE fmt-adapter )

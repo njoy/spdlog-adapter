@@ -10,7 +10,7 @@
 // By default spdlog include its own copy.
 //
 
-#if !defined(SPDLOG_FMT_EXTERNAL)
+#ifndef SPDLOG_FMT_EXTERNAL
 
 #ifndef FMT_HEADER_ONLY
 #define FMT_HEADER_ONLY

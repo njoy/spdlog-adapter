@@ -77,3 +77,8 @@ message( STATUS "Git current branch: ${GIT_BRANCH}" )
 message( STATUS "Git commit hash: ${GIT_HASH}" )
 message( STATUS "" )
 message( STATUS "-----------------------------------------------------------" )
+
+add_library( spdlog-adapter INTERFACE )
+# target_compile_definitions( spdlog-adapter INTERFACE SPDLOG_FMT_EXTERNAL )
+target_include_directories( spdlog-adapter INTERFACE src/include )
+# target_link_libraries( spdlog-adapter INTERFACE fmt-adapter )

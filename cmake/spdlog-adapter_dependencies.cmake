@@ -1,22 +1,25 @@
-########################################################################
-# Preamble
-########################################################################
+include( FetchContent )
 
-cmake_minimum_required( VERSION 3.16 )
-project( spdlog-adapter LANGUAGES CXX )
 
 ########################################################################
-# Dependencies
+# Forward declarations
 ########################################################################
 
-include( cmake/spdlog-adapter_dependencies.cmake )
 
 ########################################################################
-# Project targets
+# Declare project dependencies
 ########################################################################
 
-add_library( spdlog-adapter INTERFACE )
-target_include_directories( spdlog-adapter INTERFACE src/ )
-target_link_libraries( spdlog-adapter
-    INTERFACE fmt-adapter
+FetchContent_Declare( fmt-adapter
+    GIT_REPOSITORY  http://github.com/njoy/fmt-adapter
+    GIT_TAG         origin/build/fetchcontent
+    )
+
+
+########################################################################
+# Load dependencies
+########################################################################
+
+FetchContent_MakeAvailable(
+    fmt-adapter
     )

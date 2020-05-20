@@ -1,3 +1,0 @@
-[submodule "dependencies/fmt-adapter"]
-	path = dependencies/fmt-adapter
-	url = https://github.com/njoy/fmt-adapter.git

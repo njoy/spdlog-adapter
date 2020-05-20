@@ -16,7 +16,7 @@ include( cmake/spdlog-adapter_dependencies.cmake )
 ########################################################################
 
 add_library( spdlog-adapter INTERFACE )
-target_include_directories( spdlog-adapter INTERFACE src/ )
+target_include_directories( spdlog-adapter INTERFACE src/include/ )
 target_link_libraries( spdlog-adapter
     INTERFACE fmt-adapter
     )

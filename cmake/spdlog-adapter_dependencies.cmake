@@ -13,6 +13,7 @@ include( FetchContent )
 FetchContent_Declare( fmt-adapter
     GIT_REPOSITORY  http://github.com/njoy/fmt-adapter
     GIT_TAG         origin/build/fetchcontent
+    GIT_SHALLOW     TRUE
     )
 
 
